@@ -29,12 +29,17 @@ class MainViewModel : ViewModel() {
     private val _summatorResult = MutableStateFlow<List<Int>>(mutableListOf())
     val summatorResult = _summatorResult.asStateFlow()
 
+    private val _summatorFlowCount = MutableStateFlow("")
+    val summatorFlowCount = _summatorFlowCount.asStateFlow()
 
     private var summatorJob: Job? = null
     fun startSummator() {
+        _summatorFlowCount.value = ""
+        _summatorResult.value = listOf()
         summatorJob?.cancel()
         summatorJob = viewModelScope.launch {
-            val flowsCount = summatorInputValue.value.text.toInt()
+            val flowsCount = summatorInputValue.value.text.toIntOrNull() ?: 0
+            _summatorFlowCount.value = summatorInputValue.value.text
             val listOfFlow = mutableListOf<Flow<Int>>()
             repeat(flowsCount) { index ->
                 val currentFlow = flow {
