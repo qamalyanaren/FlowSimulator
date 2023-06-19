@@ -5,10 +5,13 @@ import am.solidy.flowsummator.ui.theme.Typography
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
@@ -57,7 +60,7 @@ fun MainScreen(
     val keyboardController = LocalSoftwareKeyboardController.current
 
     Column(
-        modifier = modifier,
+        modifier = modifier.scrollable(rememberScrollState(), Orientation.Vertical),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
@@ -104,7 +107,7 @@ fun MainScreen(
                 text = "Введенное количество: ${summatorFlowCount.value}",
             )
             Text(
-                modifier = Modifier.padding(top = 16.dp),
+                modifier = Modifier.padding(16.dp),
                 text = "Результат: ${summatorResult.value.joinToString(" ")}",
             )
         }

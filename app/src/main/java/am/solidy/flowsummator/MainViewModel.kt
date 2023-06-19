@@ -86,6 +86,6 @@ class MainViewModel : ViewModel() {
     }
 
     companion object {
-        private const val FLOW_EMMIT_DELAY_TIME = 1000L
+        private const val FLOW_EMMIT_DELAY_TIME = 100L
     }
 }
