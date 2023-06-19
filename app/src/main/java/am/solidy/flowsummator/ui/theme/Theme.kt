@@ -1,4 +1,4 @@
-package am.solidy.flowsimulator.ui.theme
+package am.solidy.flowsummator.ui.theme
 
 import android.app.Activity
 import android.os.Build

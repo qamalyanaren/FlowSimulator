@@ -1,4 +1,4 @@
-package am.solidy.flowsimulator.ui.theme
+package am.solidy.flowsummator.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

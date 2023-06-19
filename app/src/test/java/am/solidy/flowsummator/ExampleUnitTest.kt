@@ -1,4 +1,4 @@
-package am.solidy.flowsimulator
+package am.solidy.flowsummator
 
 import org.junit.Test
 

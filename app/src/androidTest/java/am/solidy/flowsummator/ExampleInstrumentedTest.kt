@@ -1,4 +1,4 @@
-package am.solidy.flowsimulator
+package am.solidy.flowsummator
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

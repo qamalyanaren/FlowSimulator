@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'am.solidy.flowsimulator'
+    namespace 'am.solidy.flowsummator'
     compileSdk 33
 
     defaultConfig {
-        applicationId "am.solidy.flowsimulator"
+        applicationId "am.solidy.flowsummator"
         minSdk 24
         targetSdk 33
         versionCode 1
